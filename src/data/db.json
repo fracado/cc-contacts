@@ -1,0 +1,94 @@
+{
+	"contacts": [
+		{
+			"id": 1,
+			"first_name": "Julie",
+			"last_name": "Smith",
+			"email": "julie@yahoo.com",
+			"phone": "08000000000",
+			"company": "Umbrella Corp",
+			"status": "customer"
+		},
+		{
+			"id": 2,
+			"first_name": "James",
+			"last_name": "Williams",
+			"email": "jameswilly@yahoo.com",
+			"phone": "08111111111",
+			"company": "Company Williams",
+			"status": "prospect"
+		},
+		{
+			"id": 3,
+			"first_name": "Ahmed",
+			"last_name": "Ali",
+			"email": "ahmedali012@yahoo.com",
+			"phone": "09022222222",
+			"company": "Ahmed Ali inc",
+			"status": "customer"
+		},
+		{
+			"id": 4,
+			"first_name": "Lilly",
+			"last_name": "Smith",
+			"email": "lillysmith@yahoo.com",
+			"phone": "09033333333",
+			"company": "Smith & Co",
+			"status": "prospect"
+		},
+		{
+			"id": 5,
+			"first_name": "John",
+			"last_name": "Doe",
+			"email": "john.d@yahoo.com",
+			"phone": "09044444444",
+			"company": "Doe & Co",
+			"status": "customer"
+		},
+		{
+			"id": 6,
+			"first_name": "Jane",
+			"last_name": "Doe",
+			"email": "jane.doe@yahoo.com",
+			"phone": "09055555555",
+			"company": "Doe & Co",
+			"status": "customer"
+		},
+		{
+			"id": 7,
+			"first_name": "Sarah",
+			"last_name": "Wong",
+			"email": "sarah.wong@yahoo.com",
+			"phone": "09066666666",
+			"company": "Umbrella Corp",
+			"status": "prospect"
+		},
+		{
+			"id": 8,
+			"first_name": "David",
+			"last_name": "Brown",
+			"email": "brown@yahoo.com",
+			"phone": "09077777777",
+			"company": "Soylent Corp",
+			"status": "customer"
+		},
+		{
+			"id": 9,
+			"first_name": "Michael",
+			"last_name": "Johnson",
+			"email": "mj@yahoo.com",
+			"phone": "09088888888",
+			"company": "Johnson & Co",
+			"status": "prospect"
+		},
+		{
+			"id": 10,
+			"first_name": "Alicia",
+			"last_name": "Hernandez",
+			"email": "hernandez.a@yahoo.com",
+			"phone": "09099999999",
+			"company": "Soylent Corp",
+			"status": "customer"
+		}
+	]
+}
