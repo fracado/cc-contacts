@@ -7,6 +7,8 @@ interface ContactState {
   isLoading: boolean;
   totalContactCount: number;
   filter: string;
+  sortCriteria: string;
+  sortOrder: 'asc' | 'desc';
 }
 
 export const useContactStore = defineStore('contactStore', {
@@ -15,15 +17,28 @@ export const useContactStore = defineStore('contactStore', {
     isLoading: false,
     totalContactCount: 0,
     filter: '',
+    sortCriteria: 'first_name',
+    sortOrder: 'asc',
   }),
   getters: {
     filteredContacts(state: ContactState): Contact[] {
-      if (!state.filter) {
-        return state.contacts;
+      let filtered = state.contacts;
+      if (state.filter) {
+        filtered = filtered.filter(contact =>
+          contact.status.toLowerCase().includes(state.filter.toLowerCase())
+        );
       }
-      return state.contacts.filter(contact =>
-        contact.status.toLowerCase().includes(state.filter.toLowerCase())
-      );
+      return filtered.sort((a, b) => {
+        let comparison = 0;
+        if (state.sortCriteria === 'first_name') {
+          comparison = a.first_name.localeCompare(b.first_name);
+        } else if (state.sortCriteria === 'last_name') {
+          comparison = a.last_name.localeCompare(b.last_name);
+        } else if (state.sortCriteria === 'company') {
+          comparison = (a.company || '').localeCompare(b.company || '');
+        }
+        return state.sortOrder === 'asc' ? comparison : -comparison;
+      });
     },
   },
   actions: {
@@ -41,6 +56,12 @@ export const useContactStore = defineStore('contactStore', {
     },
     setFilter(filter: string): void {
       this.filter = filter;
+    },
+    setSortCriteria(criteria: string): void {
+      this.sortCriteria = criteria;
+    },
+    setSortOrder(order: 'asc' | 'desc'): void {
+      this.sortOrder = order;
     },
   },
 });
