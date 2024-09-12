@@ -6,6 +6,7 @@ interface ContactState {
   contacts: Contact[];
   isLoading: boolean;
   totalContactCount: number;
+  filter: string;
 }
 
 export const useContactStore = defineStore('contactStore', {
@@ -13,7 +14,18 @@ export const useContactStore = defineStore('contactStore', {
     contacts: [],
     isLoading: false,
     totalContactCount: 0,
+    filter: '',
   }),
+  getters: {
+    filteredContacts(state: ContactState): Contact[] {
+      if (!state.filter) {
+        return state.contacts;
+      }
+      return state.contacts.filter(contact =>
+        contact.status.toLowerCase().includes(state.filter.toLowerCase())
+      );
+    },
+  },
   actions: {
     async getContacts(): Promise<void> {
       this.isLoading = true;
@@ -26,6 +38,9 @@ export const useContactStore = defineStore('contactStore', {
       } finally {
         this.isLoading = false;
       }
+    },
+    setFilter(filter: string): void {
+      this.filter = filter;
     },
   },
 });
