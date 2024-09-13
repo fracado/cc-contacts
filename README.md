@@ -1,18 +1,6 @@
-# cc-contacts
+# Contact Management System
 
-This template should help get you started developing with Vue 3 in Vite.
-
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
-
-## Type Support for `.vue` Imports in TS
-
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+This project is a Contact Management System built with Vue.js, TypeScript, and Pinia for state management. It allows users to manage contacts, including creating, updating, and filtering contacts.
 
 ## Project Setup
 
@@ -20,22 +8,24 @@ See [Vite Configuration Reference](https://vitejs.dev/config/).
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+### Running the Project
 
+#### 1. Start the JSON Server
+```sh
+npm run serve:json
+```
+This will start the JSON Server at http://localhost:3000.
+
+#### 2. Start the development Server
 ```sh
 npm run dev
 ```
+This will start the development server at http://localhost:5173.
 
-### Type-Check, Compile and Minify for Production
+### Build the project for production
 
 ```sh
 npm run build
-```
-
-### Run Unit Tests with [Vitest](https://vitest.dev/)
-
-```sh
-npm run test:unit
 ```
 
 ### Lint with [ESLint](https://eslint.org/)
