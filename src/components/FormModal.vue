@@ -94,7 +94,6 @@ export default defineComponent({
 	emits: ['close', 'save'],
 	setup(props, { emit }) {
 		const localContact = ref({ ...props.contact })
-		console.log('localContact', localContact.value)
 		watch(
 			() => props.contact,
 			(newContact) => {

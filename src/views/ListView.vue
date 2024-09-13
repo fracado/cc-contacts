@@ -90,7 +90,6 @@ export default defineComponent({
 		const isEditMode = ref(false)
 
 		const fetchContacts = async (): Promise<void> => {
-			console.log('fetchContacts')
 			await contactStore.getContacts()
 		}
 
